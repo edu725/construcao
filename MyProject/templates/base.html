@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block title %}
+        {% endblock %}
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <script src="{% static 'assets/js/bootstrap.bundle.js' %}"></script>
+        <style>
+            .cor{
+                color: white;
+            }
+            .back{
+                background-color: #005CA5;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-top: 10px;
+                color: white;
+            }
+            .padding{
+                padding-top: 20px;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+	<body>
+
+    {% block content %} 
+    {% endblock %}
+
+	</body>
+</html>
