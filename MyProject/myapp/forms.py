@@ -1,19 +1,17 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Product
-from .models import Order
-from .models import ItemOrder
+from myapp.models import  *
 
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
         labels = {
-            'name' : 'nome',
-            'description': 'descricao',
-            'price': 'preco',
-            'image': 'imagem',
-            'stock': 'estoque'
+            'name' : 'Nome',
+            'dedescription': 'Descrição',
+            'price': 'Preço',
+            'image': 'Imagem',
+            'stock': 'Estoque'
         }
         widgets = {
             'name': forms.TextInput(
@@ -22,7 +20,7 @@ class ProductForm(forms.ModelForm):
                     'placeholder': 'Ex: Saco de Cimento'
                 }
             ),
-            'descripion': forms.TextInput(
+            'dedescripion': forms.TextInput(
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Ex: Cimento'

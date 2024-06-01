@@ -4,5 +4,6 @@ from myapp.views import *
 # Create your views here.
 
 urlpatterns = [
-    path("", index, name="index"),
+    path("", index, name='index'),
+    path('add/', addItens, name='add'),
 ]

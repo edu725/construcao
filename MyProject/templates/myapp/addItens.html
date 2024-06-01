@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Sobre</title>
+{% endblock %}
+{% block content %}
+
+<form action="{% url 'add' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for fields in form.visible_fields %}
+    <label>{{fields.label}}</label>
+    {{ fields }}
+    {% endfor %}
+    <button type="submit" class="btn btn-success">Cadastrar Itens</button>
+</form>
+<!-- Inicio footer -->
+{% include 'partials/_footer.html' %}
+<!-- Fim Footer -->
+{% endblock %}
